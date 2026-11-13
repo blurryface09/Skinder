@@ -1,0 +1,173 @@
+/* 
+Style sheet for project
+
+---------------------------- 
+*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+
+/* ----- Fonts ----- */
+
+/* ----- End of Fonts ----- */
+
+/* ----- Mods ----- */
+
+/* ----- End of Mods ----- */
+
+/* ----- Fonts ----- */
+
+/* --- Poppins --- */
+
+@font-face {
+    src: url(fonts/Poppins-Bold.ttf);
+    font-family: pb;
+}
+
+@font-face {
+    src: url(fonts/Poppins-Light.ttf);
+    font-family: pl;
+}
+
+@font-face {
+    src: url(fonts/Poppins-Regular.ttf);
+    font-family: pr;
+}
+
+@font-face {
+    src: url(fonts/Poppins-Thin.ttf);
+    font-family: pt;
+}
+
+/* --- Rubiks --- */
+
+@font-face {
+    src: url(fonts/Rubik-Bold.ttf);
+    font-family: rb;
+}
+
+@font-face {
+    src: url(fonts/Rubik-Light.ttf);
+    font-family: rl;
+}
+
+@font-face {
+    src: url(fonts/Rubik-Regular.ttf);
+    font-family: rr;
+}
+
+.pr {
+    font-family: pr;
+}
+
+.pl {
+    font-family: pl;
+}
+
+.pt {
+    font-family: pt;
+}
+
+.pb {
+    font-family: pb;
+}
+
+.rb {
+    font-family: rb;
+}
+
+.rl {
+    font-family: rl;
+}
+
+.rr {
+    font-family: rr;
+}
+
+/* ----- End of Fonts ----- */
+
+.main {
+    min-height: 100%;
+    width: 100%;
+    background: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.small-icon {
+    width: 2.5rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.light-black {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    /* changed */
+    color: #fff !important;
+}
+
+.box-tab {
+    /* padding: .5rem .75rem; */
+    margin-top: .5rem;
+}
+
+.head-img {
+    width: 100px;
+    height: auto;
+}
+
+.fw-normal {
+    font-weight: normal !important;
+}
+
+.btn-signin {
+    color: #fff !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.btn-signin:hover {
+    background-color: #118192 !important;
+}
+
+.rounded-lg {
+    border-radius: 1rem !important;
+}
+
+[data-category] {
+    cursor: pointer;
+}
+
+[data-category]:hover {
+    transform: scale(1.02);
+}
+
+[data-category="01"] {
+    background-color: #d44629;
+}
+
+[data-category="02"] {
+    background-color: #0068c8;
+}
+
+[data-category="03"] {
+    background-color: #31559c;
+}
+
+[data-category="04"] {
+    background-color: #f83c00;
+}
+
+[data-category="05"] {
+    background-color: #5e0f69;
+}
+
+[data-category="06"] {
+    background-color: #007aff;
+}
